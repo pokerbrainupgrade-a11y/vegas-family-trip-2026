@@ -273,6 +273,62 @@ html,body{height:100%;overflow:hidden;background:#0A1628;color:#F8F4EC;font-fami
 .cd-arrived{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,8vw,52px);font-weight:700;color:var(--accent);margin-bottom:16px;}
 .cd-arrived-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:rgba(255,255,255,0.7);}
 
+/* ===== HUNT TAB ===== */
+.hunt-header{background:linear-gradient(135deg,#0D1E36 0%,#1A0A2E 100%);padding:28px 20px 20px;border-bottom:2px solid var(--accent);}
+.hunt-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.hunt-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,7vw,40px);font-weight:700;color:#fff;line-height:1;margin-bottom:4px;}
+.hunt-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:rgba(255,255,255,0.55);}
+
+.hunt-score-bar{background:#070F1C;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,168,75,0.15);position:sticky;top:0;z-index:10;}
+.hunt-score-left{}
+.hunt-score-pts{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--accent);line-height:1;}
+.hunt-score-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+.hunt-badge-display{text-align:right;}
+.hunt-badge-icon{font-size:28px;line-height:1;}
+.hunt-badge-name{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-top:3px;}
+.hunt-progress-wrap{background:#070F1C;padding:0 20px 12px;border-bottom:1px solid rgba(200,168,75,0.1);}
+.hunt-progress-track{height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;}
+.hunt-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold-light));border-radius:3px;transition:width 0.4s ease;width:0%;}
+.hunt-progress-text{font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);margin-top:5px;text-align:right;}
+
+.hunt-cat{margin:0 0 2px;}
+.hunt-cat-header{background:var(--charcoal);padding:14px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;border-left:4px solid var(--accent);user-select:none;min-height:44px;}
+.hunt-cat-header.open{border-left-color:var(--gold-light);}
+.hunt-cat-left{flex:1;}
+.hunt-cat-icon{font-size:18px;margin-right:8px;}
+.hunt-cat-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#fff;display:inline;}
+.hunt-cat-count{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:2px;}
+.hunt-cat-chevron{font-size:11px;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-left:8px;}
+.hunt-cat-header.open .hunt-cat-chevron{transform:rotate(180deg);}
+.hunt-cat-body{background:#0A1628;display:none;border-left:4px solid rgba(200,168,75,0.2);}
+.hunt-cat-body.open{display:block;}
+
+.hunt-item{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:flex-start;gap:14px;cursor:pointer;user-select:none;transition:background 0.1s;min-height:44px;}
+.hunt-item:last-child{border-bottom:none;}
+.hunt-item:active{background:rgba(200,168,75,0.05);}
+.hunt-item.done{opacity:0.55;}
+.hunt-check{width:28px;height:28px;border-radius:50%;border:2px solid rgba(200,168,75,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all 0.2s;font-size:14px;}
+.hunt-item.done .hunt-check{background:var(--accent);border-color:var(--accent);color:#0A1628;}
+.hunt-item-body{flex:1;}
+.hunt-item-title{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:4px;}
+.hunt-item.done .hunt-item-title{text-decoration:line-through;color:var(--muted);}
+.hunt-item-meta{display:flex;align-items:center;gap:8px;}
+.hunt-diff{font-family:'Cinzel',serif;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:600;}
+.hunt-diff-easy{background:#1A3A1A;color:#6AE87A;}
+.hunt-diff-medium{background:#2A2A1A;color:#E8C87A;}
+.hunt-diff-hard{background:#3A1A1A;color:#E87A7A;}
+.hunt-diff-bonus{background:#2A1A3A;color:#C87AE8;}
+.hunt-pts{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;color:var(--accent);}
+
+.hunt-complete-banner{display:none;background:linear-gradient(135deg,#1A0A2E,#0D1E36);border:2px solid var(--accent);border-radius:6px;margin:16px 20px;padding:24px 20px;text-align:center;}
+.hunt-complete-banner.show{display:block;animation:fadeIn 0.4s ease;}
+.hunt-complete-crown{font-size:48px;margin-bottom:8px;}
+.hunt-complete-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--accent);margin-bottom:6px;}
+.hunt-complete-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(255,255,255,0.6);}
+
+.hunt-reset-btn{display:block;margin:12px 20px 80px;padding:12px;background:transparent;border:1px solid rgba(200,168,75,0.2);color:var(--muted);font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border-radius:3px;width:calc(100% - 40px);transition:all 0.15s;}
+.hunt-reset-btn:active{border-color:var(--accent);color:var(--accent);}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:transparent;}
@@ -1319,6 +1375,426 @@ html,body{height:100%;overflow:hidden;background:#0A1628;color:#F8F4EC;font-fami
   <div class="cd-crew">Quincy · Staci · Marques · Zayden · Zoey · Stephanie · Carlton · Lelaini · Levi</div>
 </div>
 
+<!-- ===== HUNT PAGE ===== -->
+<div id="page-hunt" class="page">
+
+  <div class="hunt-header">
+    <div class="hunt-eyebrow">Zayden's Mission</div>
+    <div class="hunt-title">Vegas Scavenger Hunt</div>
+    <div class="hunt-subtitle">Spot it. Tap it. Earn your crown. · 40 challenges · 1,180 pts max</div>
+  </div>
+
+  <!-- Sticky Score Bar -->
+  <div class="hunt-score-bar">
+    <div class="hunt-score-left">
+      <div class="hunt-score-pts" id="hunt-pts-display">0</div>
+      <div class="hunt-score-label">Points Earned</div>
+    </div>
+    <div class="hunt-badge-display">
+      <div class="hunt-badge-icon" id="hunt-badge-icon">🎰</div>
+      <div class="hunt-badge-name" id="hunt-badge-name">Tourist</div>
+    </div>
+  </div>
+  <div class="hunt-progress-wrap">
+    <div class="hunt-progress-track"><div class="hunt-progress-fill" id="hunt-progress-fill"></div></div>
+    <div class="hunt-progress-text" id="hunt-progress-text">0 / 40 completed</div>
+  </div>
+
+  <!-- Badge unlock banner -->
+  <div class="hunt-complete-banner" id="hunt-complete-banner">
+    <div class="hunt-complete-crown" id="hunt-complete-crown">👑</div>
+    <div class="hunt-complete-title" id="hunt-complete-title">King of Vegas!</div>
+    <div class="hunt-complete-sub" id="hunt-complete-sub">You found everything. The city is yours, Zayden.</div>
+  </div>
+
+  <!-- CATEGORY 1: THE STRIP -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header open" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🏙️</span><span class="hunt-cat-name">The Strip</span>
+        <div class="hunt-cat-count" id="cat-count-strip">0 / 13 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body open">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot the Luxor pyramid — the giant black pyramid with the light beam shooting into the sky</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">See the giant Sphinx statue in front of Luxor</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find the hotel that looks like New York City — it even has a mini Statue of Liberty</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot the roller coaster on the outside of a building (New York-New York)</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">See the Eiffel Tower replica (Paris Las Vegas — it's half the real size)</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a giant neon sign lit up at night — the bigger the better</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot a limousine or stretch SUV on the Strip</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">See the Welcome to Las Vegas sign and stand in front of it for the group photo</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a hotel with a giant water feature or fountain out front (hint: Bellagio)</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot someone dressed in a wild or crazy costume on the Strip</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a building shaped like something other than a normal rectangle</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Count 8+ different hotel names you can read from the car window or walking the Strip</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="strip">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot the Sphere — the giant glowing ball building — from any distance</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 2: MANDALAY BAY -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🌊</span><span class="hunt-cat-name">Mandalay Bay</span>
+        <div class="hunt-cat-count" id="cat-count-mandalay">0 / 6 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Ride the lazy river at Mandalay Beach at least once all the way around</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Catch a wave in the wave pool — actually ride one</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find the entrance to Shark Reef Aquarium inside the hotel</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a shark swimming directly over your head in the glass tunnel at Shark Reef</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot a sea turtle swimming at Shark Reef Aquarium</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="mandalay">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find the jellyfish exhibit — what color are they? Remember and tell someone</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 3: ADVENTUREDOME -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🎢</span><span class="hunt-cat-name">Adventuredome</span>
+        <div class="hunt-cat-count" id="cat-count-adventure">0 / 5 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="adventure">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Ride at least one roller coaster inside the Adventuredome</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="adventure">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Play a midway game — ring toss, balloon pop, water gun race, anything</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="adventure">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Watch the free clown show (noon or 1pm) — stay for the whole thing</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="adventure">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Ride the bumper cars and bump someone from the crew</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="adventure">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Ride 3 or more different rides in one Adventuredome visit</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 4: THE SPHERE -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🌐</span><span class="hunt-cat-name">The Sphere</span>
+        <div class="hunt-cat-count" id="cat-count-sphere">0 / 3 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="sphere">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">See the outside of the Sphere building — it's the biggest ball you've ever seen</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="sphere">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot something inside the Sphere that made your jaw drop — lock it in your memory</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="sphere">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Describe your single favorite moment from the Wizard of Oz show to someone in the crew</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 5: OMEGA MART -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🌀</span><span class="hunt-cat-name">Omega Mart</span>
+        <div class="hunt-cat-count" id="cat-count-omega">0 / 4 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="omega">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a "product" on the shelf that makes absolutely zero sense</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="omega">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Discover a secret room or hidden passage inside Omega Mart</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="omega">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find something glowing or neon inside Omega Mart — there's a lot of it</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="omega">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Make it through the entire Omega Mart experience without losing the crew</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 6: MJ ONE -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🎭</span><span class="hunt-cat-name">MJ ONE — Cirque</span>
+        <div class="hunt-cat-count" id="cat-count-mj">0 / 3 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="mj">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Count 3+ performers in the air at the exact same time during the show</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="mj">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Spot a performer doing something you thought was physically impossible</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="mj">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Name your single favorite MJ song that played during the show — say it out loud</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 7: FOOD MISSIONS -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">🍕</span><span class="hunt-cat-name">Food Missions</span>
+        <div class="hunt-cat-count" id="cat-count-food">0 / 3 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="10" data-cat="food">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Order something at any meal that you've never tried before</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-easy">Easy</span><span class="hunt-pts">+10 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="25" data-cat="food">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Attempt a full Black Tap CrazyShake — the one with cake and candy on top</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-medium">Medium</span><span class="hunt-pts">+25 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="50" data-cat="food">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Eat at the Peppermill Diner and find the glowing neon fireplace inside the restaurant</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-hard">Hard</span><span class="hunt-pts">+50 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 8: BONUS -->
+  <div class="hunt-cat">
+    <div class="hunt-cat-header" onclick="toggleHuntCat(this)">
+      <div class="hunt-cat-left">
+        <span class="hunt-cat-icon">⭐</span><span class="hunt-cat-name">Bonus Challenges</span>
+        <div class="hunt-cat-count" id="cat-count-bonus">0 / 3 · 0 pts</div>
+      </div>
+      <span class="hunt-cat-chevron">▼</span>
+    </div>
+    <div class="hunt-cat-body">
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="75" data-cat="bonus">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Watch the July 4th fireworks from the hotel room window — the whole show</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-bonus">Bonus</span><span class="hunt-pts">+75 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="75" data-cat="bonus">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Find a lucky penny anywhere during the trip (ask Dad to help look near the casino floor entrance)</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-bonus">Bonus</span><span class="hunt-pts">+75 pts</span></div>
+        </div>
+      </div>
+      <div class="hunt-item" onclick="toggleHuntItem(this)" data-pts="75" data-cat="bonus">
+        <div class="hunt-check">✓</div>
+        <div class="hunt-item-body">
+          <div class="hunt-item-title">Stay up past midnight on any night of the trip — Vegas never sleeps and neither do you</div>
+          <div class="hunt-item-meta"><span class="hunt-diff hunt-diff-bonus">Bonus</span><span class="hunt-pts">+75 pts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="hunt-reset-btn" onclick="resetHunt()">↺ Reset Hunt</button>
+
+</div>
+
 <!-- ===== BOTTOM NAV ===== -->
 <nav id="bottom-nav">
   <button class="nav-btn active" id="nav-home" onclick="showPage('home')">
@@ -1340,6 +1816,10 @@ html,body{height:100%;overflow:hidden;background:#0A1628;color:#F8F4EC;font-fami
   <button class="nav-btn" id="nav-countdown" onclick="showPage('countdown')">
     <span class="nav-icon">⏱️</span>
     <span>Countdown</span>
+  </button>
+  <button class="nav-btn" id="nav-hunt" onclick="showPage('hunt')">
+    <span class="nav-icon">🔍</span>
+    <span>Hunt</span>
   </button>
 </nav>
 
@@ -1414,6 +1894,124 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// ===== SCAVENGER HUNT =====
+const BADGES = [
+  { min: 0,   icon: '🎰', name: 'Tourist',      sub: 'You showed up. Vegas says welcome.' },
+  { min: 150, icon: '🌟', name: 'Explorer',     sub: 'You\'re getting warmed up, Zayden.' },
+  { min: 350, icon: '🔥', name: 'Strip Runner', sub: 'You own the South Strip.' },
+  { min: 600, icon: '⚡', name: 'Vegas Legend', sub: 'Zayden has entered the building.' },
+  { min: 850, icon: '👑', name: 'King of Vegas', sub: 'The city belongs to you now.' }
+];
+
+const CAT_TOTALS = {
+  strip: { total: 13, maxPts: 305 },
+  mandalay: { total: 6, maxPts: 130 },
+  adventure: { total: 5, maxPts: 120 },
+  sphere: { total: 3, maxPts: 85 },
+  omega: { total: 4, maxPts: 110 },
+  mj: { total: 3, maxPts: 85 },
+  food: { total: 3, maxPts: 85 },
+  bonus: { total: 3, maxPts: 225 }
+};
+
+let huntState = JSON.parse(localStorage.getItem('zayden_hunt') || '{}');
+
+function initHunt() {
+  const items = document.querySelectorAll('.hunt-item');
+  items.forEach((item, idx) => {
+    if (huntState[idx]) item.classList.add('done');
+  });
+  updateHuntUI();
+}
+
+function toggleHuntItem(el) {
+  const items = Array.from(document.querySelectorAll('.hunt-item'));
+  const idx = items.indexOf(el);
+  const wasDone = el.classList.contains('done');
+  el.classList.toggle('done');
+  huntState[idx] = !wasDone;
+  localStorage.setItem('zayden_hunt', JSON.stringify(huntState));
+  // Micro-animation on check
+  const check = el.querySelector('.hunt-check');
+  check.style.transform = 'scale(1.3)';
+  setTimeout(() => { check.style.transform = 'scale(1)'; }, 150);
+  updateHuntUI();
+}
+
+function updateHuntUI() {
+  const items = document.querySelectorAll('.hunt-item');
+  let totalPts = 0;
+  let totalDone = 0;
+  const catCounts = {};
+  const catPts = {};
+
+  items.forEach((item, idx) => {
+    const pts = parseInt(item.dataset.pts);
+    const cat = item.dataset.cat;
+    if (!catCounts[cat]) { catCounts[cat] = 0; catPts[cat] = 0; }
+    if (huntState[idx]) {
+      totalPts += pts;
+      totalDone++;
+      catCounts[cat]++;
+      catPts[cat] += pts;
+    }
+  });
+
+  // Update score
+  document.getElementById('hunt-pts-display').textContent = totalPts;
+
+  // Update badge
+  let badge = BADGES[0];
+  for (const b of BADGES) { if (totalPts >= b.min) badge = b; }
+  document.getElementById('hunt-badge-icon').textContent = badge.icon;
+  document.getElementById('hunt-badge-name').textContent = badge.name;
+
+  // Update progress bar
+  const pct = Math.round((totalDone / 40) * 100);
+  document.getElementById('hunt-progress-fill').style.width = pct + '%';
+  document.getElementById('hunt-progress-text').textContent = totalDone + ' / 40 completed · ' + pct + '%';
+
+  // Update category counts
+  for (const [cat, info] of Object.entries(CAT_TOTALS)) {
+    const el = document.getElementById('cat-count-' + cat);
+    if (el) el.textContent = (catCounts[cat] || 0) + ' / ' + info.total + ' · ' + (catPts[cat] || 0) + ' pts';
+  }
+
+  // Badge unlock banner — show on tier upgrade or completion
+  const banner = document.getElementById('hunt-complete-banner');
+  if (totalDone === 40) {
+    banner.classList.add('show');
+    document.getElementById('hunt-complete-crown').textContent = '👑';
+    document.getElementById('hunt-complete-title').textContent = 'King of Vegas!';
+    document.getElementById('hunt-complete-sub').textContent = 'You found everything. The city is yours, Zayden.';
+  } else if (totalPts >= 850) {
+    banner.classList.add('show');
+    document.getElementById('hunt-complete-crown').textContent = '⚡';
+    document.getElementById('hunt-complete-title').textContent = 'Vegas Legend Unlocked!';
+    document.getElementById('hunt-complete-sub').textContent = badge.sub;
+  } else {
+    banner.classList.remove('show');
+  }
+}
+
+function toggleHuntCat(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
+}
+
+function resetHunt() {
+  if (!confirm('Reset the hunt? All progress will be cleared.')) return;
+  huntState = {};
+  localStorage.removeItem('zayden_hunt');
+  document.querySelectorAll('.hunt-item').forEach(el => el.classList.remove('done'));
+  document.getElementById('hunt-complete-banner').classList.remove('show');
+  updateHuntUI();
+}
+
+initHunt();
 </script>
 </body>
 </html>
